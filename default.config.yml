@@ -7,7 +7,7 @@ configure_osx: true
 
 # Set to 'true' to configure the Dock via dockutil.
 configure_dock: true
-dockitems_remove: []
+dockitems_remove:
  - Launchpad
  - TV
  - Podcasts
@@ -17,11 +17,11 @@ dockitems_persist: []
 #   path: "/Applications/Sublime Text.app/"
 #   pos: 5
 
-configure_sudoers: true
+configure_sudoers: false
 # Example:
- sudoers_custom_config: |
-   # Allow users in admin group to use sudo with no password.
-   %admin ALL=(ALL) NOPASSWD: ALL
+sudoers_custom_config: |
+  # Allow users in admin group to use sudo with no password.
+  %admin ALL=(ALL) NOPASSWD: ALL
 
 dotfiles_repo: https://github.com/madbuda/dotfiles.git
 dotfiles_repo_accept_hostkey: true
@@ -59,7 +59,6 @@ homebrew_installed_packages:
   - openssl
   - pv
   - wget
-  - wrk
   - zsh-history-substring-search
   - direnv
   - fluxcd/tap/flux
